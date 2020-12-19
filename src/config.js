@@ -1,4 +1,7 @@
 const config = {
+    STRIPE_KEY:
+        "pk_test_51I0QIDB92y1VfSsnIFRQEWdLdXaDFSo0W7TVs2YOMQpJvfpDCEn3SrCeVYA1Q9Qp1SdYYpgp6LzYAyhc2rWh8ssR00Y9VaXMZB",
+    MAX_ATTACHMENT_SIZE: 5000000,
     s3: {
         REGION: "eu-central-1",
         BUCKET: "poggers-test-upload",
