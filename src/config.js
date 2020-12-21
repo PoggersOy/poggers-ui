@@ -1,7 +1,6 @@
-const production = {
+const prod = {
     STRIPE_KEY:
         "pk_test_51I0QIDB92y1VfSsnIFRQEWdLdXaDFSo0W7TVs2YOMQpJvfpDCEn3SrCeVYA1Q9Qp1SdYYpgp6LzYAyhc2rWh8ssR00Y9VaXMZB",
-    MAX_ATTACHMENT_SIZE: 5000000,
     s3: {
         REGION: "eu-central-1",
         BUCKET: "prod-poggers-infra-s3-uploads4f6eb0fd-1wegc417ns7cn",
@@ -18,10 +17,9 @@ const production = {
     },
 };
 
-const development = {
+const dev = {
     STRIPE_KEY:
         "pk_test_51I0QIDB92y1VfSsnIFRQEWdLdXaDFSo0W7TVs2YOMQpJvfpDCEn3SrCeVYA1Q9Qp1SdYYpgp6LzYAyhc2rWh8ssR00Y9VaXMZB",
-    MAX_ATTACHMENT_SIZE: 5000000,
     s3: {
         REGION: "eu-central-1",
         BUCKET: "dev-poggers-infra-s3-uploads4f6eb0fd-uszenkzvq51f",
@@ -38,4 +36,11 @@ const development = {
     },
 };
 
-export default production;
+const config = {
+  // Add common config values here
+  MAX_ATTACHMENT_SIZE: 5000000,
+  // Default to dev if not set
+  ...(process.env.REACT_APP_STAGE === "prod" ? prod : dev),
+};
+
+export default config;
