@@ -22,9 +22,8 @@
         "build": "react-scripts build",
         "test": "react-scripts test",
         "eject": "react-scripts eject",
-        "predeploy": "react-scripts build",
         "deploy": "aws s3 sync ./build s3://poggers/poggers.fi --delete --profile poggers",
-        "postdeploy": "aws cloudfront create-invalidation --distribution-id E374IX1F4EY1D8 --paths '/*' --profile poggers"
+        "invalidate": "aws cloudfront create-invalidation --distribution-id E374IX1F4EY1D8 --paths '/*' --profile poggers"
     },
     "eslintConfig": {
         "extends": [
