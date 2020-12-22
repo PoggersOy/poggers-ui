@@ -8,6 +8,9 @@ import { BrowserRouter as Router } from 'react-router-dom'
 import App from './App'
 import config from './config'
 import reportWebVitals from './reportWebVitals'
+import { initSentry } from './libs/errorLib';
+
+initSentry();
 
 Amplify.configure({
     Auth: {
