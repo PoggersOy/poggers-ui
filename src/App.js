@@ -52,7 +52,7 @@ function App() {
                 >
                     <LinkContainer to="/">
                         <Navbar.Brand className="font-weight-bold text-muted">
-                            Scratch
+                            Poggers Oy
                         </Navbar.Brand>
                     </LinkContainer>
                     <Navbar.Toggle />
